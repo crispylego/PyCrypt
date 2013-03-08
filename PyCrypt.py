@@ -51,4 +51,14 @@ def decrypt(msg, key):
 		i+=1
 	
 	return decrypted
+
+if __name__ == '__main__':
+	import sys
+	operation = sys.argv[1]
+	msg = sys.argv[2]
+	key = sys.argv[3]
+	if operation == 'encrypt':
+		print encrypt(msg, key)
+	elif operation == 'decrypt':
+		print decrypt(msg, key)
 	
